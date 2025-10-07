@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVE Fit-in-Stock</title>
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --panel: #111821;
+        --text: #dbe3ec;
+        --muted: #8fa1b5;
+        --green: #1f8336;
+        --red: #a52222;
+        --orange: #c77d1c;
+        --border: #223246;
+        --accent: #51a3ff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--text);
+      }
+      a { color: var(--accent); }
+      .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+      header h1 { margin: 0 0 8px 0; font-size: 24px; }
+      header p { margin: 0 0 24px; color: var(--muted); }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+      .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+      label { display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 8px; }
+      textarea { width: 100%; min-height: 220px; resize: vertical; background: #0d141c; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      .row { display: flex; gap: 16px; align-items: stretch; }
+      .results { margin-top: 16px; }
+      .fit { border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+      .fit h3 { margin: 0 0 8px; font-size: 16px; }
+      .status { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 999px; font-size: 12px; border: 1px solid currentColor; }
+      .status.green { color: #9ae6b4; background: rgba(31,131,54,0.12); border-color: #1f8336; }
+      .status.red { color: #fecaca; background: rgba(165,34,34,0.12); border-color: #a52222; }
+      .status.orange { color: #fde68a; background: rgba(199,125,28,0.12); border-color: #c77d1c; }
+      .muted { color: var(--muted); }
+      ul { margin: 6px 0 0 20px; }
+      .tooltip { position: relative; display: inline-flex; }
+      .tooltip .icon { width: 16px; height: 16px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 50%; color: var(--muted); cursor: default; font-size: 12px; }
+      .tooltip .content { position: absolute; top: 120%; left: 0; z-index: 10; min-width: 260px; max-width: 420px; background: #0d141c; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; color: var(--text); font-weight: 400; line-height: 1.3; box-shadow: 0 10px 20px rgba(0,0,0,.35); display: none; }
+      .tooltip:hover .content, .tooltip:focus-within .content { display: block; }
+      footer { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); }
+      .loading { color: var(--muted); }
+      .error { color: #ff6b6b; }
+    </style>
+    <script type="module" crossorigin src="/assets/index-B45drMyv.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
